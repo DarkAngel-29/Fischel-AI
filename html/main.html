@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fischel AI</title>
+    <link rel="stylesheet" href="..\css\main.css">
+    
+</head>
+<body id = "body">
+    <div class="header">
+        <div class="logo">🧠</div>
+        <div class="header-text">
+            <h1>AI Exam Prep Assistant</h1>
+            <p>Generate smart questions, practice actively, and get instant feedback powered by AI.</p>
+        </div>
+    </div>
+
+    <div class="tags">
+        <button class="tag purple">✨ Focus on easier questions to solidify your foundations.</button>
+        <button class="tag blue">📖 Multiple subjects & difficulties</button>
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <div class="panel-header">
+                <div class="panel-title">SESSION CONTROLS</div>
+                <div style="font-size: 20px;">📊</div>
+            </div>
+            <div class="panel-subtitle">Choose your subject and difficulty, then generate tailored questions.</div>
+            <div class = "row">
+                <div class="form-group">
+                    <label class="form-label">SUBJECT</label>
+                    <div class="select-wrapper">
+                        <select id="subject">
+                            <option value="JEE">JEE</option>
+                            <option value="NEET">NEET</option>
+                            <option value="VITEE">VITEE</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">DIFFICULTY</label>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn easy active" data-difficulty="easy">Easy</button>
+                        <button class="difficulty-btn medium" data-difficulty="medium">Medium</button>
+                        <button class="difficulty-btn hard" data-difficulty="hard">Hard</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <p class="info-text">Questions are generated dynamically based on your selected subject and difficulty.</p>
+
+                <button class="generate-btn">
+                    <span>✨</span>
+                    <span>Generate Question</span>
+                </button>
+            </div>
+            <div style="margin-top: 40px;">
+                <div class="panel-title" style="margin-bottom: 15px;">ACTIVE QUESTION</div>
+                <div class="panel-subtitle">Answer the question, then submit to see how you performed.</div>
+                <div style="text-align: right; margin-bottom: 10px;">
+                    <span class="status-badge">No question generated</span>
+                </div>
+                <div class="question-area">
+                    <div class="question-icon">📖</div>
+                    <h3>Ready to start practicing?</h3>
+                    <p>Select a subject and difficulty, then click <strong>Generate Question</strong> to begin your personalized exam prep session.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <div class="panel-title">📊 PERFORMANCE ANALYTICS</div>
+                <div style="font-size: 20px;">🎯</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card blue">
+                    <div class="stat-label blue">📈 Total Questions</div>
+                    <div class="stat-value blue" id="totalQuestions">0</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-label green">✅ Correct</div>
+                    <div class="stat-value green" id="correctAnswers">0</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-label purple">📊 Accuracy</div>
+                    <div class="stat-value purple" id="accuracy">0 %</div>
+                </div>
+                <div class="stat-card yellow">
+                    <div class="stat-label yellow">📈 Avg. Score</div>
+                    <div class="stat-value yellow" id="avgScore">0 <span style="font-size: 18px;">/100</span></div>
+                </div>
+            </div>
+
+            <div class="focus-box one">
+                <div class="focus-icon">🎯</div>
+                <div class="focus-content one">
+                    <h4>FOCUS ON EASIER QUESTIONS</h4>
+                    <p>Focus on easier questions to solidify your foundations.</p>
+                </div>
+            </div>
+            <div class="focus-box two">
+                <div class="focus-icon">🤖</div>
+                <div class="focus-content two">
+                    <h4>Mini chatbot</h4>
+                    <p>Work in progress coming soon.</p>
+                    <progress value="70" max="100" style="width: 100%;"></progress>
+                    <input class = "chat" type="text" placeholder="What's your Doubt?" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src = "../js/main.js">   </script>
+</body>
+<script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+
+<footer  style="text-align: center; padding: 20px; color: #ffffff;">
+    <div style = "display: flex;gap:3px;justify-content: center;flex-direction: column;">
+        <p> &copy; 2026 AI Exam Prep Assistant.</p>
+        <div>
+            <p> Contact Us</p>
+            <a href = "tel:+919566089685">Dinesh D</a>
+            <a href = "tel:+918072548331">Ragavendhar B M</a>
+            <a href = "tel:+919597463224">Abith R</a>
+        </div>
+    </div>
+</footer>
+</html>

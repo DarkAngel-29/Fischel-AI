@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | AI Exam Prep</title>
+    <link rel="stylesheet" href="..\css\login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2 id="formTitle">Fischel AI</h2>
+    <p class="subtitle" id="formSubtitle">Login to continue</p>
+
+    <form id="loginForm">
+        <div class="input-group">
+            <input type="text" id="loginUsername" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="loginPassword" required>
+            <label>Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+        <p class="error" id="loginError"></p>
+    </form>
+
+    <form id="registerForm" style="display: none;">
+        <div class="input-group">
+            <input type="text" id="registerUsername" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="registerPassword" required>
+            <label>Password</label>
+        </div>
+
+        <button type="submit">Register</button>
+        <p class="error" id="registerError"></p>
+    </form>
+
+    <p class="toggle-text">
+        <span id="toggleText">New user?</span>
+        <a href="#" id="toggleForm">Register</a>
+    </p>
+</div>
+<footer>
+    <p>Exam prep assistant for Rural students</p>
+</footer>
+<script src="..\js\login.js"></script>
+</body>
+
+</html>
