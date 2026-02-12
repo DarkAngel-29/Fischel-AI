@@ -49,7 +49,8 @@
         .logo {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg,rgba(133, 72, 133, 0.45),rgba(51, 120, 109, 0.45));            border-radius: 12px;
+            background: linear-gradient(135deg,rgba(133, 72, 133, 0.45),rgba(51, 120, 109, 0.45));            
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
